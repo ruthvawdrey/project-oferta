@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>child selector</title>
+    <style>
+      div > p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <code> div > p { ... } </code>
+    <div>
+      <p>This is a &lt;p&gt; whose parent is a &lt;div&gt; element</p>
+      <h2>This is a &lt;h2&gt; whose parent is a &lt;div&gt; element</h2>
+    </div>
+
+    <div>
+      <span
+        ><p>
+          This is a &lt;p&gt; whose grandparent is a &lt;div&gt;, but whose
+          parent is a &lt;span&gt; element.
+        </p>
+      </span>
+    </div>
+
+    <p>This is a &lt;p&gt; with no parent.</p>
+  </body>
+</html>

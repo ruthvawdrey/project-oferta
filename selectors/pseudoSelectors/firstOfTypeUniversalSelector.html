@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<title>firstOfType.html</title>
+		<style>
+			article :first-of-type {
+				color:red;
+            }
+			pre {
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<pre>
+			<code>
+				article :first-of-type {
+						...
+				}
+			</code>
+		</pre>
+		<article>
+            <div>This `div` is first!</div>
+            <div>This <span>nested `span` is first</span>!</div>
+            <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+            <div>This <span>nested `span` gets styled</span>!</div>
+            <b>This `b` qualifies!</b>
+            <div>This is the final `div`.</div>
+          </article>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>onlyOfType.html</title>
+    <style>
+      /* Notice the space... this is the descendant selector */
+      div :only-of-type {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>I am `span` #1.</span>
+      <p>I am the only `p` among my siblings.</p>
+      <span>I am `span` #2.</span>
+      <div>I am a `div`</div>
+      <span>
+        I am `span` #3.
+        <i>I am the only `i` child.</i>
+        <em>I am `em` #1.</em>
+        <em>I am `em` #2.</em>
+      </span>
+    </div>
+    <div>
+      <section>I am the only 'section'</section>
+    </div>
+  </body>
+</html>

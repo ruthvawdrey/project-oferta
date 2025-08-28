@@ -1,0 +1,60 @@
+div {
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
+}
+div.static {
+  position: static;
+  border: 3px solid blue;
+}
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid darkgreen;
+}
+div.fixed {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 300px;
+  border: 3px solid darkred;
+}
+
+div.sticky {
+  position: sticky;
+  top: 0px;
+  border: 3px solid darkorchid;
+}
+
+div.relativeParent {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid darkgreen;
+}
+div.absolute {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 200px;
+  height: 100px;
+  border: 3px solid darkorange;
+}
+
+span {
+  font-weight: bold;
+}
+span.static {
+  color: blue;
+}
+span.relative {
+  color: darkgreen;
+}
+span.fixed {
+  color: darkred;
+}
+span.absolute {
+  color: darkorange;
+}
+span.sticky {
+  color: darkorchid;
+}

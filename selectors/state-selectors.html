@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS State Selectors Demo</title>
+    <style>
+      input {
+        margin: 6px 0;
+        padding: 4px;
+        border: 2px solid #ccc;
+        background: #f9f9f9;
+        display: block;
+      }
+      input:valid {
+        border: 2px solid green;
+        background: #eaffea;
+      }
+      input:invalid {
+        border: 2px solid red;
+        background: #ffeaea;
+      }
+      input:hover {
+        border: 2px solid blue;
+        background: #eaf3ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS State Selectors Demo</h2>
+
+    <label
+      >Text (required, valid if not empty):
+      <input required placeholder="Required" />
+    </label>
+
+    <label
+      >Email:
+      <input type="email" placeholder="user@example.com" />
+    </label>
+  </body>
+</html>

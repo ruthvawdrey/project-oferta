@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>onlyChild.html</title>
+    <style>
+      div:only-child {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+		<code>
+			div:only-child {
+					...
+			}
+		</code>
+	</pre>
+    <div>
+      <div>
+        <div>I am an only child.</div>
+      </div>
+      <div>
+        <div>I am the 1st sibling.</div>
+        <div>I am the 2nd sibling.</div>
+        <div>
+          I am the 3rd sibling,
+          <div>but this is an only child.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

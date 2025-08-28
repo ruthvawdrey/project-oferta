@@ -1,0 +1,38 @@
+<!doctype html>
+<html> 
+	<head>
+		<title>Position</title>
+		<style>
+			div.relativeParent {
+			    position: relative;
+			    width: 400px;
+			    height: 200px;
+			    border: 3px solid darkgreen;
+			}
+
+			div.absolute {
+			    position: absolute;
+			    top: 80px;
+			    right: 0;
+			    width: 200px;
+			    height: 100px;
+			    border: 3px solid darkorange;
+			}
+			span{
+				font-weight: bold;
+			}
+			span.relative{
+				color: darkgreen;
+			}
+			span.absolute{
+				color: darkorange;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="relative">This div element has position: <span class="relative">relative</span>
+		  <div class="absolute">This div element has position: <span class="absolute">absolute</span></div>
+		</div>
+
+</html>
+ 
