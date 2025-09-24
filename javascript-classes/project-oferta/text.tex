@@ -1,0 +1,304 @@
+$
+
+make the amazon project - today
+
+___________________________________________________________________________________________________
+
+
+Logic Puzzle:
+
+You are standing in a room with three light switches. 
+The switches all correspond to three different light bulbs in an adjacent room that you cannot see into.
+ With all the light switches starting in the off position,
+ how can you find out which switch connects to which light bulb?
+
+ Answer:
+You may only enter the room with the light bulbs one time.
+
+
+1. Turn on the first switch and leave it on for a few minutes.
+2. After a few minutes, turn off the first switch and turn on the second switch.
+3. Immediately go into the room with the light bulbs.
+4. The bulb that is on corresponds to the second switch (the one you left on).
+5. The bulb that is off but warm corresponds to the first switch (the one you turned on first and then off).
+6. The bulb that is off and cold corresponds to the third switch (the one you never turned on).    
+
+___________________________________________________________________________________________________
+
+
+Browser Storage
+
+Local Storage and Session Storage are two types of web storage that allow websites to store data on a user's browser. They are part of the Web Storage API and provide a way to store key-value pairs in a web browser.
+
+Local Storage:
+- Data persists even when the browser is closed and reopened.
+- Suitable for storing non-sensitive data that needs to be available across sessions.
+
+Session Storage:
+- Data is only available for the duration of the page session.
+- Suitable for storing temporary data that should not persist after the tab is closed.
+- Data is cleared when the page session ends (i.e., when the tab or browser is closed).
+
+___________________________________________________________________________________________________
+
+
+Cookies in browser storage
+Cookies are small pieces of data that are stored on a user's computer by their web browser while they are browsing a website. They are used to remember information about the user, such as login credentials, preferences, and tracking information.   
+
+small pieces of data
+stored on a user's computer
+remember information about the user
+login credentials
+preferences
+tracking information    
+(steal information)
+Request on the server side
+Cookies are sent to the server with every HTTP request, allowing the server to identify the user and retrieve their stored information.
+stored user name
+Track analytics
+
+___________________________________________________________________________________________________
+console 
+document.cookie
+// Set a cookie
+document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/";
+
+___________________________________________________________________________________________________
+
+Local Storage
+// Set an item in local storage
+localStorage.setItem("username", "JohnDoe");    
+
+Safe data
+
+// Store data in localStorage
+localStorage.setItem("key", "value");
+
+// Retrieve data from localStorage
+const value = localStorage.getItem("key");
+
+// Remove data from localStorage
+localStorage.removeItem("key");
+
+// Clear all data from localStorage
+localStorage.clear();
+
+
+localStorage.setItem("username", JSON.stringify({ name: "John", age: 30 }));
+
+const retrievedData = JSON.parse(localStorage.getItem("username"));
+
+console.log(retrievedData.name); // Output: John
+console.log(retrievedData.age);  // Output: 30
+
+localStorage.clear() // clear all data
+localStorage.removeItem("username") // remove specific item
+
+
+
+setItem
+getItem
+removeItem -----
+clear   
+
+JSON.parse(localStorage.getItem("username") )
+
+JSON.stringify      
+
+
+const updateItems = (key, newValue) => {
+  const existingData = JSON.parse(localStorage.getItem(key)) || {};
+  const updatedData = { ...existingData, ...newValue };
+  localStorage.setItem(key, JSON.stringify(updatedData));
+
+
+  const updateItems = (cartItems) => {
+    const updatedItems = cartItems.filter((item) => item.name !== "Apple");
+    % localStorage.setItem("cart", JSON.stringify(updatedItems));
+  };
+
+
+  function for delete item inside of a cart 
+
+
+    const deleteItem = (itemName) => {
+        const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        const updatedItems = cartItems.filter((item) => item.name !== itemName);
+        localStorage.setItem("cart", JSON.stringify(updatedItems));
+    };
+
+___________________________________________________________________________________________________
+
+
+  console 
+
+  localStorage 
+
+  ___________________________________________________________________________________________________
+
+don't safe safe information
+password
+credit card
+social security number 
+delete cookies 
+
+delete all your safe password from browser
+___________________________________________________________________________________________________
+
+session Storage
+// Set an item in session storage
+sessionStorage.setItem("sessionID", "abc123");  
+
+session-based storage
+
+// Store data in sessionStorage
+sessionStorage.setItem("key", "value");
+
+
+
+shopping cart
+// Retrieve data from sessionStorage
+const value = sessionStorage.getItem("key");
+
+___________________________________________________________________________________________________
+
+
+IndexedDB
+IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. 
+This API uses indexes to enable high-performance searches of this data. While Web Storage
+
+
+They don't need internet to access data
+
+NoSQL database
+store significant amounts of data
+structured data
+files/blobs
+high-performance searches
+key-value pairs
+asynchronous API
+transactional database systems (localStorage and sessionStorage) are useful for storing small amounts of data, IndexedDB is more powerful and suitable for applications that require storing large amounts of data.
+___________________________________________________________________________________________________
+
+Understand Backend for security
+
+
+
+security concerns : XSS attacks
+Cross-Site Scripting (XSS) attacks are a type of security vulnerability 
+that allows attackers to inject malicious scripts into web pages viewed by other users.
+ These attacks can lead to various harmful consequences, including data theft, session hijacking, and defacement of websites. 
+ Here are some key points
+to understand about XSS attacks:
+1. Types of XSS Attacks:
+   - Stored XSS: The malicious script is permanently stored on the target server, such as in a database, and is served to users when they access the affected page.
+   - Reflected XSS: The malicious script is reflected off a web server, typically in an error message or search result, and is immediately executed in the user's browser.
+   - DOM-based XSS: The vulnerability exists in the client-side code rather than the server-side code. The malicious script manipulates the DOM (Document Object Model) of the page.
+2. Consequences of XSS Attacks:
+   - Data Theft: Attackers can steal sensitive information such as cookies, session tokens, or other personal data.
+   - Session Hijacking: Attackers can take over a user's session, gaining unauthorized access to their account.
+   - Defacement: Attackers can modify the content of a website, often to display unwanted or harmful content.
+   - Malware Distribution: Attackers can use X  SS to distribute malware to users.
+3. Prevention Measures:
+   - Input Validation: Always validate and sanitize user inputs to ensure they do not contain malicious code.
+   - Output Encoding: Encode data before rendering it in the browser to prevent the execution of malicious scripts.
+   - Content Security Policy (CSP): Implement CSP headers to restrict the sources from which    scripts can be loaded and executed.
+   - Use Security Libraries: Utilize libraries and frameworks that have built-in protections against XSS attacks.
+   - Regular Security Audits: Conduct regular security assessments and code reviews to identify and fix vulnerabilities.
+4. User Awareness:
+   - Educate users about the risks of XSS attacks and encourage them to report suspicious activities.
+   - Advise users to keep their browsers and plugins up to date to mitigate vulnerabilities.        
+5. Browser Security Features:
+   - Modern browsers have built-in security features that can help mitigate the risks of XSS attacks, such as same-origin policies and XSS filters.
+Overall, preventing XSS attacks requires a combination of secure coding practices, user education, and the use of security tools and features.
+
+
+
+Mitigating security risks in web applications involves implementing a combination of best practices, tools, and strategies to protect against various threats. Here are some key measures to consider:  
+1. Input Validation and Sanitization:
+   - Always validate and sanitize user inputs to prevent injection attacks, such as SQL injection and XSS (Cross-Site Scripting).
+   - Use libraries or frameworks that provide built-in input validation features.
+2. Use HTTPS:
+   - Ensure that your web application uses HTTPS to encrypt data transmitted between the client and server.
+   - Obtain and regularly renew SSL/TLS certificates.
+3. Implement Strong Authentication and Authorization:
+   - Use strong password policies and multi-factor authentication (MFA) to enhance security.                
+
+
+
+   avoid storing sensitive information in browser storage
+   use encryption for sensitive data
+
+   implement input validation and sanitization
+   use output encoding to prevent XSS attacks
+   use HttpOnly and Secure flags for cookies
+   implement Content Security Policy (CSP)
+   regularly update and patch software
+   conduct regular security audits and penetration testing
+   educate users about security best practices
+   monitor and log suspicious activities
+   use security headers (e.g., X-Content-Type-Options, X-Frame-Options)
+   limit data exposure and access controls
+   back up data regularly and securely
+   use web application firewalls (WAF)
+   stay informed about the latest security threats and vulnerabilities
+   follow the principle of least privilege for user roles and permissions
+   implement session management best practices (e.g., session expiration, secure cookies)
+   ensure proper error handling to avoid information leakage        
+
+    use security-focused libraries and frameworks
+    keep dependencies up to date    
+
+    implement rate limiting to prevent brute-force attacks
+
+4. Secure Session Management:
+   - Use secure cookies with the HttpOnly and Secure flags to protect session data.
+   - Implement session expiration and regeneration mechanisms.
+5. Regularly Update and Patch Software:
+   - Keep your web server, database, and application frameworks up to date with the latest security patches.
+   - Monitor for vulnerabilities in third-party libraries and dependencies.
+6. Implement Content Security Policy (CSP):
+   - Use CSP headers to restrict the sources from which content can be loaded, reducing the risk of XSS attacks.
+7. Use Security Headers:        
+   - Implement security headers such as X-Content-Type-Options, X-Frame-Options, and X-XSS-Protection to enhance security.
+8. Conduct Regular Security Audits and Penetration Testing:
+   - Regularly assess your web application for vulnerabilities through security audits and penetration testing.
+   - Address any identified issues promptly.
+9. Educate Users About Security Best Practices:
+   - Provide training and resources to help users recognize phishing attempts and other social engineering attacks.
+   - Encourage strong password practices and the use of password managers.
+10. Monitor and Log Suspicious Activities:
+    - Implement logging and monitoring to detect and respond to suspicious activities in real-time.
+    - Use tools like intrusion detection systems (IDS) and security information and event management (SIEM) solutions.
+11. Limit Data Exposure and Access Controls:
+    - Follow the principle of least privilege by granting users and services only the access they need.
+    - Regularly review and update access controls.
+12. Back Up Data Regularly and Securely:
+    - Implement regular data backups and ensure they are stored securely.
+    - Test backup and recovery processes periodically.
+13. Use Web Application Firewalls (WAF):
+    - Deploy a WAF to filter and monitor HTTP traffic to and from your web application.
+    - Configure the WAF to block common attack patterns.        
+14. Stay Informed About the Latest Security Threats and Vulnerabilities:
+    - Subscribe to security bulletins and follow industry news to stay updated on emerging threats.
+    - Participate in security communities and forums.
+15. Follow the Principle of Least Privilege for User Roles and Permissions:
+    - Ensure that users and services have only the minimum permissions necessary to perform their tasks.
+    - Regularly review and adjust permissions as needed.        
+
+
+    Perform considerations for data sensitivity and compliance requirements
+    Implement rate limiting to prevent brute-force attacks
+    Use security-focused libraries and frameworks
+    Keep dependencies up to date
+___________________________________________________________________________________________________     
+
+Storage Limitations 
+
+Pitforms	Storage Limitations
+Local Storage	Typically around 5-10 MB per origin (varies by browser)
+Session Storage	Typically around 5-10 MB per origin (varies by browser)
+
+___________________________________________________________________________________________________     
+
+codehs.com

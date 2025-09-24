@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bid App</title>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <input id="bidder1Input" type="number" placeholder="bidder1 Bid">
+  <button onclick="placeBid('bidder1Input')">Place Bidder 1 Bid</button>
+
+  <input id="bidder2Input" type="number" placeholder="bidder2 Bid">
+  <button onclick="placeBid('bidder2Input')">Place Bidder 2 Bid</button>
+
+  <div id="bids"></div>
+  <div id="highestBid"></div>
+  <button onclick="clearBids()">Clear Bids</button>
+</body>
+</html>
