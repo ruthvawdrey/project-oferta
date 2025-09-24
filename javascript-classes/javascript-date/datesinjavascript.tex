@@ -1,0 +1,165 @@
+
+
+$ Javascript Date 
+\begin{itemize}
+\item \texttt{new Date()} - creates a new date object with the current date and time
+\item \texttt{new Date(milliseconds)} - creates a new date object associated with the number of milliseconds since January 1, 1970
+\item \texttt{new Date(dateString)} - creates a new date object from a date string
+
+
+Data constructor: Single argument (Value    Type) -> Date
+\item \texttt{new Date(year, month, day, hours, minutes, seconds, milliseconds)} - creates a new date object with the specified date and time (month is 0-indexed)
+\end{itemize}   
+
+single number argument -> Date
+string argument -> Date
+multiple number arguments -> Date
+single number argument -> Date  
+string argument -> Date
+
+
+
+Data only string argument -> Date
+Data only multiple number arguments -> Date
+Data only single number argument -> Date
+Data only string argument -> Date
+Data only multiple number arguments -> Date
+Data only single number argument -> Date
+Data only string argument -> Date
+Data only multiple number arguments -> Date
+Data only single number argument -> Date
+Data only string argument -> Date
+Data only multiple number arguments -> Date
+Data only single number argument -> Date
+Data only string argument -> Date
+Data only multiple number arguments -> Date
+Data only single number argument -> Date
+
+
+
+Validating  user input: basic date Validating
+
+exemple:
+\begin{verbatim}
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
+\end{verbatim} date
+Validating  user input: basic date Validating
+exemple:
+\begin{verbatim}
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
+\end{verbatim}  date
+Validating  user input: basic date Validating
+exemple:
+\begin{verbatim}
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
+\end{verbatim} date
+Validating  user input: basic date Validating
+exemple:
+\begin{verbatim}
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
+\end{verbatim}  date
+Validating  user input: basic date Validating
+exemple:
+\begin{verbatim}
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+}
+\end{verbatim} date
+Validating  user input: basic date Validating
+exemple:
+\begin{verbatim}
+function isValidDate(d) {
+  return d instanceof Date && !isNaN(d);
+
+  Validaing User Input: DD/MM/YYYY
+
+
+
+  getMonth() returns month from 0 to 11
+  getDate() returns day of the month from 1 to 31
+  getFullYear() returns the four-digit year
+  \end{verbatim}
+\end{itemize}
+
+Consistent format: YYYY-MM-DD
+
+
+
+
+moment.js
+
+
+
+
+https://jsdate.wtf/
+
+
+
+Date.parse ===
+
+new Date("not a date") // Invalid Date
+Date.parse("not a date") // NaN
+
+
+new Date("not a date").toString() // "Invalid Date"
+
+
+new Date("1") // Date object for Jan 1, 2001
+
+
+__________________________________________________________________________________
+
+object dates 
+
+__________________________________________________________________________________
+
+console 
+__________________________________________________________________________________
+
+const c = new Date("2020-01-01T00:00:00Z");
+
+new Date(100) // Invalid Date
+
+new Date("2020-01-01") // Date object for Jan 1, 2020
+
+
+
+dat.getDate() // 1
+dat.getMonth() // 0 (January, as months are zero-indexed)
+dat.getFullYear() // 2020
+dat.getHours() // 0
+dat.getMinutes() // 0
+dat.getSeconds() // 0
+dat.getMilliseconds() // 0
+dat.getTime() // 1577836800000 (milliseconds since Jan 1, 1970)
+dat.toISOString() // "2020-01-01T00:00:00.000Z"
+dat.toString() // "Wed Jan 01 2020 00:00:00 GMT+0000 (Coordinated Universal Time)"  
+
+
+
+dat.toISOString() // "2020-01-01T00:00:00.000Z"
+dat.toString() // "Wed Jan 01 2020 00:00:00 GMT+0000 (Coordinated Universal Time)"
+dat.toLocaleString() // "1/1/2020, 12:00:00 AM" (format may vary based on locale)
+dat.toDateString() // "Wed Jan 01 2020"
+dat.toTimeString() // "00:00:00 GMT+0000 (Coordinated Universal Time)"
+dat.toUTCString() // "Wed, 01 Jan 2020 00:00
+
+
+
+
+new Date( 200, 1, 15,12,45, 23 ) // February 15, 2000, 12:30:45.500 PM
+new Date( 99, 11, 31 ) // December 31, 1999
+new Date( 2020, 0, 1 ) // January 1, 2020
+new Date( 2020, 11, 31 ) // December    31, 2020
+
+
+start with 0 for January
+end with 11 for December        

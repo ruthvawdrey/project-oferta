@@ -1,0 +1,59 @@
+@use 'goatbox';
+@use 'variables' as v;
+
+$primary-color: #6c166f;
+$secondary-color: #59c5da;
+
+
+body {
+ background-color: v.$primary-color;
+ margin: 0;
+}
+
+%disablebutton {
+  background-color: grey;
+  border: none;
+  color: white;
+
+  cursor: not-allowed;
+  border-radius: 12px;
+}
+
+button {
+  background-color: v.$secondary-color;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+
+  &:hover {
+    background-color: darken(v.$secondary-color, 10%);
+  }
+}
+
+.disablebutton {
+  @extend %disablebutton;
+  
+}
+
+@mixin theme($theme:darkGray) {
+    background-color: $theme;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px, rgba($theme, 0.25);
+    
+    }
+
+div {
+  @include theme(v.$primary-color);
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}

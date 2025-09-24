@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="component/index.js" defer></script>
+    <title>AmazonClone - Online Shopping</title>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">AmazonClone</div>
+            
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+                <button class="search-button" onclick="searchProducts()">🔍</button>
+            </div>
+            
+            <div class="cart" onclick="toggleCart()">
+                🛒 Cart (<span class="cart-count" id="cartCount">0</span>)
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#" onclick="filterByCategory('all')">All</a></li>
+                <li><a href="#" onclick="filterByCategory('electronics')">Electronics</a></li>
+                <li><a href="#" onclick="filterByCategory('clothing')">Clothing</a></li>
+                <li><a href="#" onclick="filterByCategory('books')">Books</a></li>
+                <li><a href="#" onclick="filterByCategory('home')">Home & Garden</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <h1>Great deals on everything you need</h1>
+            <p>Shop millions of products with fast, free delivery</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-group">
+                <label>Sort by:</label>
+                <select id="sortSelect" onchange="sortProducts()">
+                    <option value="default">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Customer Rating</option>
+                </select>
+                
+                <label>Price Range:</label>
+                <input type="range" id="priceRange" min="0" max="1000" value="1000" oninput="filterByPrice()">
+                <span id="priceValue">$1000</span>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div class="products-section">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-total">
+            <div class="total-price" id="totalPrice">Total: $0.00</div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <!-- <script> -->
+      
+</body>
+</html>

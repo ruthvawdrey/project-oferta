@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security+ SY0-701 Flashcards</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f1f5f9; margin: 0; padding: 20px; }
+    .container { max-width: 800px; margin: auto; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    .flashcard { position: relative; width: 100%; height: 200px; perspective: 1000px; margin-bottom: 15px; }
+    .card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; cursor: pointer; }
+    .card.flipped .card-inner { transform: rotateY(180deg); }
+    .card-front, .card-back {  width: 100%; height: 100%; backface-visibility: hidden; border: 1px solid #ccc; border-radius: 10px; background: #fff; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .card-back { transform: rotateY(180deg); background: #f9fafb; }
+    .controls { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+    button { padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { opacity: 0.9; }
+    .prev, .next { background: #e2e8f0; }
+    .flip { background: #3b82f6; color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Security+ SY0-701 Flashcards</h1>
+    <div class="flashcard">
+      <div class="card" id="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3 id="question">Question</h3>
+          </div>
+          <div class="card-back">
+            <p id="answer">Answer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="prev" onclick="prevCard()">Prev</button>
+      <button class="flip" onclick="flipCard()">Flip</button>
+      <button class="next" onclick="nextCard()">Next</button>
+    </div>
+  </div>
+
+  <script>
+    const cards = [
+      { q: "What does the CIA triad stand for?", a: "Confidentiality, Integrity, Availability." },
+      { q: "What is the difference between phishing and spear phishing?", a: "Phishing is broad and untargeted; spear phishing is targeted and customized." },
+      { q: "What is the principle of least privilege (PoLP)?", a: "Users should only have the minimum access necessary." },
+      { q: "What does SIEM stand for?", a: "Security Information and Event Management." },
+      { q: "What is the difference between RTO and RPO?", a: "RTO = time to recover; RPO = acceptable data loss." },
+      { q: "What is ransomware?", a: "Malware that encrypts files and demands payment." },
+      { q: "What is a DMZ in network security?", a: "A demilitarized zone that separates external services from internal networks." },
+      { q: "Which type of control is a firewall?", a: "Technical control." },
+      { q: "What is the first phase of incident response?", a: "Preparation." },
+      { q: "What does GDPR regulate?", a: "Data protection and privacy in the EU." }
+    ];
+
+    let currentIndex = 0;
+    const questionEl = document.getElementById("question");
+    const answerEl = document.getElementById("answer");
+    const card = document.getElementById("card");
+
+    function showCard(index) {
+      questionEl.textContent = cards[index].q;
+      answerEl.textContent = cards[index].a;
+      card.classList.remove("flipped");
+    }
+
+    function nextCard() {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    }
+
+    function prevCard() {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showCard(currentIndex);
+    }
+
+    function flipCard() {
+      card.classList.toggle("flipped");
+    }
+
+    showCard(currentIndex);
+  </script>
+</body>
+</html>
+
+
+

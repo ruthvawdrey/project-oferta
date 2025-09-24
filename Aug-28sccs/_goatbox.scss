@@ -1,0 +1,7 @@
+ @use 'variables' as v;
+ 
+ .goatbox {
+   border: 2px solid $secondary-color;
+   padding: 20px;
+   margin: 20px;
+ }

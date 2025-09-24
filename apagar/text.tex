@@ -1,0 +1,34 @@
+*** BASIC & FUNDAMENTAL GIT COMMANDS ***
+Repository Setup
+git init → Initialize a new Git repository in the current folder.
+git clone <url> → Clone (download) an existing repository from a remote (like GitHub).
+Staging & Committing
+git status → Check status of files (staged, unstaged, untracked).
+git add <file> → Stage specific file(s) for commit.
+git add . → Stage all changes.
+git commit -m "message" → Commit staged changes with a message.
+Remote Setup
+git remote add origin <url> → Add a remote repository (commonly called origin).
+git remote -v → View remotes linked to your local repo.
+Pushing & Pulling
+git push -u origin main → Push commits to remote main branch (first time with -u to set upstream).
+git push → Push commits to the tracked branch on remote.
+git pull → Fetch and merge changes from remote into your local branch.
+git fetch → Download changes from remote without merging.
+Viewing History
+git log → View commit history.
+git log --oneline → Condensed commit history.
+*** GIT BRANCHING AND MERGING WORKFLOW ***
+Branch Management
+git branch branchname → creates a new branch
+git checkout branchname → checks out the branch
+git checkout -b newbranch → creates and checks out branch
+git branch -r  → list all branches tracked by the origin.
+git branch -D branchname → deletes local branch
+git branch -D origin/branchname -r  → deletes remote branch tracking
+git push origin -D branchname → deletes remote branch
+Collaboration & Synchronization
+git pull → collects the changes for the repository
+Branch Comparison & Integration
+git diff branchname →  diffs branchname if branched checked out is not branchname
+git merge branchname →  merges branchname into checked out branch (edited)

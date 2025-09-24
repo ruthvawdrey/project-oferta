@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Netflix Clone</title>
+</head>
+<body class="m-0 p-0">
+  <div class="bg-[url('nazare.png')] bg-cover h-screen w-screen">
+    <div class="wrapper flex h-full w-full">
+      <nav class="w-20 md:w-64 bg-white/20 backdrop-blur-md rounded-3xl p-6 m-4 flex flex-col items-center space-y-4">
+        <ul class="flex flex-col space-y-4 items-center text-white">
+          <li class="flex items-center space-x-2">
+            <i class="fa fa-home text-2xl hover:border-2 hover:border-white" aria-label="Home"></i>
+            <span class="hidden md:block">Home</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fa fa-user text-2xl hover:border-2 hover:border-white" aria-label="Profile"></i>
+            <span class="hidden md:block">Profile</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fa fa-envelope text-2xl hover:border-2 hover:border-white" aria-label="Messages"></i>
+            <span class="hidden md:block">Messages</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fa fa-bell text-2xl hover:border-2 hover:border-white" aria-label="Notifications"></i>
+            <span class="hidden md:block">Notifications</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fa fa-cog text-2xl hover:border-2 hover:border-white" aria-label="Settings"></i>
+            <span class="hidden md:block">Settings</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fa fa-sign-out text-2xl hover:border-2 hover:border-white" aria-label="Sign Out"></i>
+            <span class="hidden md:block">Sign Out</span>
+          </li>
+        </ul>
+      </nav>
+      <main class="flex-1 p-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 bg-white/20 backdrop-blur-md rounded-2xl p-8 border-t-1 border-l-1 border-white/50">
+          <div class="moviebox bg-[url('nazare.png')] bg-cover rounded-2xl h-[250px] p-6 flex items-end relative before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/50 before:to-transparent hover:scale-105 transition-transform duration-300">
+            <div class="desc flex justify-between w-full text-white z-10">
+              <div>
+                <span class="subtitle text-lg font-bold">Brooklyn</span>
+                <span class="stats text-sm">2012 | Rated G | 1hr</span>
+              </div>
+              <i class="fa fa-play-circle text-4xl"></i>
+            </div>
+          </div>
+          <!-- Add more movie boxes -->
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

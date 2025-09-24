@@ -1,0 +1,187 @@
+To install an autocomplete AI tool for LaTeX in VS Code, follow these steps:
+
+1. Open VS Code.
+2. Go to Extensions (Ctrl+Shift+X).
+3. Search for "LaTeX Workshop" and install it.
+4. For AI-powered autocomplete, install "GitHub Copilot":
+    - Search for "GitHub Copilot" in Extensions.
+    - Click Install.
+5. Sign in to GitHub when prompted to activate Copilot.
+
+Now, Copilot will provide AI-powered autocomplete suggestions while you write LaTeX.
+
+% To change text color in LaTeX, use the xcolor package.
+\usepackage{xcolor}
+
+% Example: Change text color to red
+\textcolor{red}{This text is red.}
+
+% You can also define custom colors:
+\definecolor{myblue}{RGB}{30, 144, 255}
+\textcolor{myblue}{This text uses a custom blue color.}
+
+
+$
+Javascript Numbers and Math
+_______________________________
+method = function 
+ __________________________________
+
+callback - function
+  __________________________________
+
+declare 
+
+ __________________________________
+
+return = end function
+ __________________________________
+
+
+ var = function-scoped 
+ __________________________________
+
+In JavaScript, you can declare a constant using the `const` keyword. For example:
+
+\begin{verbatim}
+const pi = 3.14159;
+\end{verbatim}
+
+This creates a constant named \texttt{pi} whose value cannot be changed.
+
+
+_________________________________________________________
+
+Javascript Numbers and Math
+
+
+In JavaScript, an \textbf{integer} is a number without a decimal point. For example:
+
+\begin{verbatim}
+let count = 10; // integer
+let price = 4.99; // not an integer (has decimals)
+\end{verbatim}
+
+JavaScript does not have a separate integer type; all numbers are represented as \texttt{Number} type, which can be integers or floating-point values.
+
+
+A \textbf{float} (short for "floating-point number") in JavaScript is a number that has a decimal point. For example:
+
+\begin{verbatim}
+let temperature = 23.5; // float
+let pi = 3.14159; // float
+\end{verbatim}
+
+In JavaScript, both integers and floats are represented by the same \texttt{Number} type. There is no separate type for floating-point numbers.
+
++ operators
+mode
+
+modulos
+give us the remainder
+
+Exponentiation
+
+___________________________________
+
+let num = 4;
+console.log(num);
+
+console.log(++num);
+
+// console.log(num++) use the variable and increment after
+
+button.addEventListener("click", function (){
+    this.innrHTML="Clicked" + ++count +"times";
+    console.log(count);
+});
+__________________________________________
+
+// IEEE 754 Standart
+Floating-point numbers in JavaScript follow the IEEE 754 standard, which can lead to precision issues. For example:
+
+\begin{verbatim}
+console.log(0.1 + 0.2); // Output: 0.30000000000000004
+\end{verbatim}
+
+This happens because some decimal fractions cannot be represented exactly in binary floating-point. Always be careful when comparing floating-point numbers for equality.
+__________________
+
+Math in the console
+
+Math.pi
+
+Math.round(x)
+Math.random()
+
+generate unique ID
+
+The \texttt{Math.random()} function in JavaScript returns a pseudo-random floating-point number in the range $[0, 1)$ (inclusive of $0$, but not $1$). It is commonly used for generating random numbers, such as for games, simulations, or creating unique identifiers.
+
+\begin{verbatim}
+let randomNumber = Math.random();
+console.log(randomNumber); // Example output: 0.726357843
+\end{verbatim}
+
+To generate a random integer within a specific range, you can use:
+
+\begin{verbatim}
+// Random integer between min (inclusive) and max (exclusive)
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+\end{verbatim}
+
+\textbf{Note:} \texttt{Math.random()} is not suitable for cryptographic purposes.
+
+
+Math.ceil(x) ========= write up
+Math.floor(x) ========= write down
+
+Math.truc(x)
+
+
+
+Math.abs(x) =========== absolute value
+
+Math.sign(x)============== sign of the number
+
+Math.pow(x,y)============ power
+
+Math.sqrt(x))============ sqrt
+
+Math.min() ===== arguments minimum 
+Math.max()
+
+Math.random()
+
+
+password generation
+
+Math.floor(Math.random()*10)
+________________________________________
+
+5 == 5 
+
+expression return a value
+
+
+statement 
+const num = 6 + 2
+
+________________________________________
+
+5 === '5' the type 
+5 == '5' value
+ 5 != 5 not ( boolean)
+5 !=='5' trueee
+
+
+________________________________________
+
+amazon order sumary
+calculate amazon car
+calculate tax
+
+________________________________________
+
